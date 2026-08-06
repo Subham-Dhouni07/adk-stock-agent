@@ -1,12 +1,13 @@
 from google.adk import Agent
 from google.adk.tools.agent_tool import AgentTool
 from dotenv import load_dotenv
+
 from ipo_agent.agent import ipo_agent
 from stock_picker_agent.agent import stock_picker_agent
 
 load_dotenv(override=True)
 
-root_agent = Agent(
+stock_agent = Agent(
 
     name="stock_agent",
     model = 'gemini-2.5-flash',
